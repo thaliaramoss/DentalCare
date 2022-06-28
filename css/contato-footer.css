@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+#contato {
+display: flex;
+flex-direction: column;
+}
+
+#contato a{
+    text-align: center;
+}
+
+.contato-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ctt-form{
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    background-color: rgba(254, 249, 255, 1);
+    padding: 10px;
+}
