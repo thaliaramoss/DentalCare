@@ -1,4 +1,4 @@
-/*Fonte*/
+/*==============================GERAL====================================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
     /*Cores*/
@@ -7,227 +7,255 @@
     --cor3:#FEF9FF;
     --fonte: Poppins;
 }
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body{
-    font-family: var(--fonte);
-    overflow-x: hidden;
+  font-family: var(--fonte);
+  overflow-x: hidden;
 }
-/*navbar*/
+/*==============================NAVEGAÇÃO=====================================*/
 #menu{
-    position: fixed;
-    top: 0;
-    width: 100%;  
+  position: fixed;
+  top: 0;
+  width: 100%;  
 }
 .menunav{
-    background-color: var(--cor2);
-    width: 100%;
+  background-color: var(--cor2);
+  width: 100%;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
 }
 .menunav a:nth-child(1){
-    
-    font-size: 1.5rem;
+  
+  font-size: 1.5rem;
 }
 .menunav a:nth-child(1)::before{
-    content: "dental";
-    color: #000;
+  content: "dental";
+  color: #000;
 }
 .menunav a{
-   display: inline-block;
-   align-items: center;
-   text-decoration: none;
+ display: inline-block;
+ align-items: center;
+ text-decoration: none;
 
-    padding: .5rem;
+  padding: .5rem;
 
 
 }
-
+/*===============================INÍCIO=======================================*/
 #inicio{
-    width: 100%;
-    max-width: 100vw;
-    height: 80vh;
-    padding-top: 10vh;
-    background-color: var(--cor2);
-    margin:0;
+  width: 100%;
+  max-width: 100vw;
+  height: 80vh;
+  padding-top: 10vh;
+  background-color: var(--cor2);
+  margin:0;
 
-    /*flex*/
-    display: flex;
-    justify-content: space-between;
-    
-   
+  /*flex*/
+  display: flex;
+  justify-content: space-between;
+  
+ 
 }
 .slogan{
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 3rem;
-    margin-top: 0px;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 0px;
 }
 .textinicio{
-    width: 50%;
-    padding-left: 3rem;
+  width: 50%;
+  padding-left: 3rem;
 }
 .textinicio p{
-    color: var(--cor1);
-    font-size: .75rem;
-    
+  color: var(--cor1);
+  font-size: .75rem;
+  
 }
 .textinicio p:nth-child(3){
-    color: black;
-    font-size: 1rem;
-    margin-top: 3rem;
-    
+  color: black;
+  font-size: 1rem;
+  margin-top: 3rem;
+  
 }
 .agendar{
-    color: #FFF;
-    background-color:#4c26d4 ;
-    border-radius: 40px;
+  color: #FFF;
+  background-color:#4c26d4 ;
+  border-radius: 40px;
 }
 .wagende{
-    border-radius: 40px;
-    background-color:#4c26d4 ;
-    cursor: pointer;
-    text-decoration: none;
+  border-radius: 40px;
+  background-color:#4c26d4 ;
+  cursor: pointer;
+  text-decoration: none;
 }
 .wagende p{
-    margin-top: 40px;
-    max-width: 291px;
-    width: 30%;
-    color: #FFF;
-    background-color:#4c26d4 ;
-    border-radius: 40px;
-    padding: 10px;
+  margin-top: 40px;
+  max-width: 291px;
+  width: 30%;
+  color: #FFF;
+  background-color:#4c26d4 ;
+  border-radius: 40px;
+  padding: 10px;
 }
 .wagende p:before{
 
-    content: "";
-    display: block;
-    background: url("images/icons8-whatsapp-24.png") no-repeat;
-    width: 24px;
-    height: 24px;
-    float: left;
-    margin: -3px 6px 0px 4px;
+  content: "";
+  display: block;
+  background: url("images/icons8-whatsapp-24.png") no-repeat;
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin: -3px 6px 0px 4px;
 }
 .imginicio{
-    background-image: url(images/inicio.png.png);
-    width: 100%;
-    height: 100%;
-    max-width: 500px;
-    max-height: 600px;
-    background-size: cover;
+  background-image: url(images/inicio.png.png);
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 600px;
+  background-size: cover;
 
-    float: right;
+  float: right;
 }
-
-/*SERVIÇOS*/
+/*================================SERVIÇOS====================================*/
 #servicos{
-    width: 100%;
-    max-width: 100vw;
-    background-color: var(--cor3);
-    margin:0;
-    /*flex*/
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  background-color: var(--cor3);
+  margin:0;
+  /*flex*/
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 #servicos h1{
-    padding-top: 2rem;
-    text-transform: uppercase;
+  padding-top: 2rem;
+  text-transform: uppercase;
 }
 #servicos h1, h3{
-    font-weight: bold;
+  font-weight: bold;
 }
 .parte1{
-    display: flex;
-    flex-direction: row;
-    padding: 1.5rem;
-    
+  display: flex;
+  flex-direction: row;
+  padding: 1.5rem;
+  
 }
 .parte1 div{
-    padding: 2rem;
+  padding: 2rem;
 }
 .parte2{
-    display: flex;
-    flex-direction: row;
-    padding: 1.5rem;
-    
+  display: flex;
+  flex-direction: row;
+  padding: 1.5rem;
+  
 }
 .parte2 div{
-    padding: 2rem;
+  padding: 2rem;
 }
+/*==============================ESP FÍSICO====================================*/
+#espaco{
+  height: 700px;
+  width: 100vw;
+  background-color: var(--cor1);
 
-/*DEPOIMENTOS*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#espaco h1{
+  text-align: center;
+  padding: 1rem;
+}
+#fisico{
+  width: 80%;
+  height: 60%;
+  background-position: center;
+  background-image: url(images/fisico1.jpg);
+  background-size: cover;
+
+}
+/*==============================DEPOIMENTOS===================================*/
 #depoimentos{
-    height: 300px;
-    /*height: 80vh;*/
-    width: 100vw;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
+  height: 300px;
+  /*height: 80vh;*/
+  width: 100vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 #depoimentos h1{
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #000;
-    max-height: 130px;
-    text-align: center;
-    padding: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+  max-height: 130px;
+  text-align: center;
+  padding: 1rem;
 }
 
 #externa{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
 }
 #primeiro, #segundo{
-    width: 40%;
-    padding: 2rem;
+  width: 40%;
+  padding: 2rem;
 }
 
 #externa h3::before{
-    content: "";
-    display: block;
-    background: url("images/icons8-male-user-48.png") no-repeat;
-    width: 48px;
-    height: 48px;
-    float: left;
-    margin: -3px 6px 0px 4px;
+  content: "";
+  display: block;
+  background: url("images/icons8-male-user-48.png") no-repeat;
+  width: 48px;
+  height: 48px;
+  float: left;
+  margin: -3px 6px 0px 4px;
 }
-/*ESPAÇO FÍSICO*/
-#espaco{
-    height: 700px;
-    width: 100vw;
-    background-color: var(--cor1);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-#espaco h1{
-    text-align: center;
-    padding: 1rem;
-}
-#fisico{
-    width: 80%;
-    height: 60%;
-    background-position: center;
-    background-image: url(images/fisico1.jpg);
-    background-size: cover;
+/*==============================SOBRE=========================================*/
 
 
-}
 
+
+
+
+
+/*==============================CONTATO=======================================*/
+
+
+
+
+
+
+
+/*==============================FOOTER========================================*/
+
+
+
+
+
+
+
+
+
+/*==============================RESPONSIVIDADE====================================*/
