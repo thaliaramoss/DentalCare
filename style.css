@@ -27,6 +27,7 @@ body{
   position: fixed;
   top: 0;
   width: 100%;  
+  z-index: 100;
 }
 .menunav{
   background-color: var(--cor2);
@@ -175,7 +176,7 @@ body{
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 #espaco h1{
@@ -189,6 +190,61 @@ body{
   background-image: url(images/fisico1.jpg);
   background-size: cover;
 
+}
+.externa{
+  width: 100vw;
+  background-color: var(--cor1);
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+.interna{
+  width: 400%;
+  height: 100%;
+  overflow: hidden;
+
+  transform: translateX(0);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.img{
+  width: 25%;
+  position: relative;
+
+  transition: all 1s ease;
+}
+
+.img img{
+  width: 100%;
+  height: 100%;
+
+}
+
+.butao{
+
+  background-color: rgba(243, 239, 239, 0);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.butao button{
+  background-color: #d6d3d6c7;
+  border: none;
+  text-align: center;
+  padding: 1px;
+  border-radius: 3px;
 }
 /*==============================DEPOIMENTOS===================================*/
 #depoimentos{
