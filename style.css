@@ -1,11 +1,12 @@
 /*==============================GERAL====================================*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 :root{
     /*Cores*/
     --cor1:#7D82B8;
     --cor2:#D8E4FF;
     --cor3:#FEF9FF;
-    --fonte: Poppins;
+    --fonte: 'Poppins';
 }
 
 *{
@@ -23,36 +24,128 @@ body{
   overflow-x: hidden;
 }
 /*==============================NAVEGAÇÃO=====================================*/
-#menu{
+a {
+  color: black;
+  text-decoration: none;
+  
+}
+
+nav {
   position: fixed;
   top: 0;
-  width: 100%;  
-}
-.menunav{
-  background-color: var(--cor2);
-  width: 100%;
-
+  width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  
+  background-color:#D8E4FF;
+  height: 8vh;
 }
-.menunav a:nth-child(1){
-  
-  font-size: 1.5rem;
+
+ul:last-child {
+  gap: 48px
 }
-.menunav a:nth-child(1)::before{
-  content: "dental";
-  color: #000;
+
+.logo {
+  font-size: 30px;
+  letter-spacing: 1px;
+
 }
-.menunav a{
- display: inline-block;
- align-items: center;
- text-decoration: none;
 
-  padding: .5rem;
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 32px;
+  font-weight: 400;
+  transition: 0.3s;
+
+}
+
+.nav-menu li:hover{
+  font-weight: bold;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 24px;
+  width: fit-content;
+  height: min-content;
+  padding: 9px;
+  text-transform: uppercase;
 
 
+}
+
+/*MENU MOBILE*/
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div{
+  width: 32px;
+  height: 2px;
+  margin: 8px;
+  background-color: #7D82B8;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 100vw;
+    height: 92vh;
+    background-color: #7D82B8;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 48px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-menu li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
 }
 /*===============================INÍCIO=======================================*/
 #inicio{
@@ -73,7 +166,7 @@ body{
   font-weight: 700;
   font-size: 2rem;
   line-height: 3rem;
-  margin-top: 0px;
+  margin-top: 1.5rem;
 }
 .textinicio{
   width: 50%;
@@ -87,7 +180,7 @@ body{
 .textinicio p:nth-child(3){
   color: black;
   font-size: 1rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   
 }
 .agendar{
@@ -111,24 +204,23 @@ body{
   padding: 10px;
 }
 .wagende p:before{
-
   content: "";
   display: block;
   background: url("images/icons8-whatsapp-24.png") no-repeat;
   width: 24px;
   height: 24px;
   float: left;
+  padding: 16px;
   margin: -3px 6px 0px 4px;
 }
-.imginicio{
-  background-image: url(images/inicio.png.png);
-  width: 100%;
-  height: 100%;
-  max-width: 500px;
-  max-height: 600px;
-  background-size: cover;
 
+.imginicio{
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 600px;;
   float: right;
+  margin-right: 100px;
 }
 /*================================SERVIÇOS====================================*/
 #servicos{
@@ -168,7 +260,7 @@ body{
   padding: 2rem;
 }
 /*==============================ESP FÍSICO====================================*/
-#espaco{
+#estrutura{
   height: 700px;
   width: 100vw;
   background-color: var(--cor1);
@@ -186,7 +278,7 @@ body{
   width: 80%;
   height: 60%;
   background-position: center;
-  background-image: url(images/fisico1.jpg);
+  background-image: url(assets/estrutura/est1.jpg);
   background-size: cover;
 
 }

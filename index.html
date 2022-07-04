@@ -5,30 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <title>DentalCare</title>
 </head>
 <body>
 
   <!--==============================NAVEGAÇÃO=====================================-->
-  <header id="menu">
-    <nav class="menunav">
-        <a href="/" class="logo">Care</a>
-        <a href="#">Inicio</a>
-        <a href="#">Sobre</a>
-        <a href="#">Serviços</a>
-        <a href="#">Depoimentos</a>
-        <a href="#">Estrutura</a>
-        <a href="#">Contato</a>
-        <a href="#" class="agendar">Agendar</a>
-    </nav>
+  <header>
+    <nav class="nav" id="navbar">
+        <a class="logo" href="/">Dental<b>Care</b></a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#estrutura">Estrutura</a></li>
+          <li><a class="button" href="#contato">agendar consulta</a></li>
+        </ul>
+      </nav>
+    </header>
 </header>
 <main>
   <!--==============================INÍCIO=====================================-->
@@ -38,19 +37,16 @@
             SEJA BEM-VINDO(A) A DENTALCARE.
         </p>
         <h1 class="slogan">
-            Aqui o seu sorriso é a nossa prioridade!
+            O seu sorriso é a nossa prioridade!
         </h1>
         <p>
             Os profissionais da DentalCare se preocupam, devidamente, com seu bem-estar, proporcionando atendimentos com qualidade.
         </p>
-        <a class="wagende" href="#">
-            <p> Agende sua consulta</p>
+        <a class="wagende" href="#contato">
+            <p>Agende sua consulta</p>
         </a>
     </div>
-
-    <aside class="imginicio">
-        
-    </aside>
+        <img class="imginicio" src="/assets/inicio/inicio.png" alt="imagem de uma mulher sorrindo">
 </section>
 
     <!--==============================SERVIÇOS=====================================-->
@@ -103,14 +99,15 @@
         </section>
 
     <!--==============================ESPAÇO FÍSICO=====================================-->
-  <section id="espaco">
+  <section id="estrutura">
       <h1>
           Conheça nosso espaço físico:
       </h1>
       <div id="fisico">
 
       </div>
-  </section>    <!--==============================DEPOIMENTOS=====================================-->
+  </section>   
+   <!--==============================DEPOIMENTOS=====================================-->
   <section id="depoimentos">
     <h1>
         Conheça pessoas que tiveram seu sorriso renovado pela Dentalcare
@@ -137,8 +134,8 @@
 
     <!--==============================SOBRE=====================================-->
     <section  id="sobre" >
-      <p>Sobre</p>
-      <h2>Saiba mais sobre nós!</h2>
+      <p>Sobre a DentalCare</p>
+      <h2>Quem somos?</h2>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellat temporibus id fuga, numquam ea, eaque a autem in rerum doloremque natus quo ipsum voluptas officiis quidem esse et cupiditate?</p>
     </section>
     <!--==============================CONTATO=====================================-->
