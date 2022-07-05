@@ -1,5 +1,12 @@
-// ====================NAV=====================================================================
-
+// ====================NAV SCROLL=====================================================================
+window.addEventListener('scroll', NavOnScroll)
+function NavOnScroll() {
+  if (scrollY > 0) {
+    navbar.classList.add('scroll')
+  } else {
+    navbar.classList.remove('scroll')
+  }
+}
 // ========================MENU MOBILE=========================================================
 class MobileNavbar {
   constructor(mobileMenu, navMenu, navLinks) {
@@ -45,6 +52,8 @@ const mobileNavbar = new MobileNavbar(
   ".nav-menu li",
 );
 mobileNavbar.init();
+
+
 //=================CAROUSEL DEP================================================================
 
 // ==================CAROUSEL EST===============================================================

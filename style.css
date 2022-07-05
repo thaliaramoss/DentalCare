@@ -13,6 +13,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
+  font-family: var(--fonte);
 }
 
 html {
@@ -20,8 +22,9 @@ html {
 }
 
 body{
-  font-family: var(--fonte);
   overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 /*==============================NAVEGAÇÃO=====================================*/
 a {
@@ -41,13 +44,16 @@ nav {
   height: 8vh;
 }
 
+
 ul:last-child {
   gap: 48px
 }
 
 .logo {
-  font-size: 30px;
-  letter-spacing: 1px;
+  width: 4px;
+  height: 4px;
+  display: flex;
+  justify-content: right;
 
 }
 
@@ -57,9 +63,10 @@ ul:last-child {
 }
 
 .nav-menu li {
-  margin-left: 32px;
+  margin-left: auto;
   font-weight: 400;
   transition: 0.3s;
+  font-size: 16px;
 
 }
 
@@ -73,9 +80,21 @@ ul:last-child {
   width: fit-content;
   height: min-content;
   padding: 9px;
+  margin-left: 60px;
   text-transform: uppercase;
+}
 
+nav.scroll {
+  background-color: var(--cor1);
+  opacity: 0.9;
+}
 
+.scroll .logo, ul li{
+  color: #FFF;
+}
+
+.scroll .mobile-menu {
+  color: #FFF;
 }
 
 /*MENU MOBILE*/
@@ -95,6 +114,8 @@ ul:last-child {
   body {
     overflow-x: hidden;
   }
+
+  
   .nav-menu {
     position: absolute;
     top: 8vh;
@@ -102,6 +123,7 @@ ul:last-child {
     width: 100vw;
     height: 92vh;
     background-color: #7D82B8;
+    opacity: 0.9;
     flex-direction: column;
     align-items: center;
     padding: 32px;
@@ -109,6 +131,7 @@ ul:last-child {
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
+
 
   .nav-menu li {
     margin-left: 0;
@@ -263,7 +286,7 @@ ul:last-child {
 #estrutura{
   height: 700px;
   width: 100vw;
-  background-color: var(--cor1);
+  background-color: var(--cor2);
 
   display: flex;
   flex-direction: column;
