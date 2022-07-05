@@ -50,3 +50,25 @@ mobileNavbar.init();
 // ==================CAROUSEL EST===============================================================
 
 // ====================SCROLL SUAVE=============================================================
+
+/*======alteração nav========*/
+var menucounter = 0;
+
+function funcao1(){
+ 
+  console.log(menucounter)
+  if (menucounter == 0){
+    menucounter=1;
+    console.log(menucounter)
+    document.getElementById('navbar').style="background-color:#7D82B8; color: #fff;"
+    document.getElementById('line1').style="background-color: #fff;"
+    document.getElementById('line3').style="background-color: #fff;"
+  } else {
+    menucounter=0;
+    console.log(menucounter)
+    document.getElementById('navbar').style="background-color:#D8E4FF; color: #fff;"
+    document.getElementById('line1').style="background-color: #7D82B8;"
+    document.getElementById('line3').style="background-color: #7D82B8;"
+  }
+}
+document.getElementById('mobmenu').addEventListener('click', funcao1)

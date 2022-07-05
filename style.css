@@ -35,7 +35,7 @@ nav {
   top: 0;
   width: 100vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-color:#D8E4FF;
   height: 8vh;
@@ -108,6 +108,7 @@ ul:last-child {
     gap: 48px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+    
   }
 
   .nav-menu li {
