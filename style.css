@@ -1,15 +1,15 @@
 /*==============================GERAL====================================*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-:root{
-    /*Cores*/
-    --cor1:#7D82B8;
-    --cor2:#D8E4FF;
-    --cor3:#FEF9FF;
-    --fonte: 'Poppins';
+:root {
+  /*Cores*/
+  --cor1: #7d82b8;
+  --cor2: #d8e4ff;
+  --cor3: #fef9ff;
+  --fonte: "Poppins";
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   overflow-x: hidden;
   min-height: 100vh;
   min-width: 100vw;
@@ -30,7 +30,6 @@ body{
 a {
   color: black;
   text-decoration: none;
-  
 }
 
 nav {
@@ -40,13 +39,12 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color:#D8E4FF;
+  background-color: #d8e4ff;
   height: 8vh;
 }
 
-
 ul:last-child {
-  gap: 48px
+  gap: 48px;
 }
 
 .logo {
@@ -54,7 +52,6 @@ ul:last-child {
   height: 4px;
   display: flex;
   justify-content: right;
-
 }
 
 .nav-menu {
@@ -67,10 +64,9 @@ ul:last-child {
   font-weight: 400;
   transition: 0.3s;
   font-size: 16px;
-
 }
 
-.nav-menu li:hover{
+.nav-menu li:hover {
   font-weight: bold;
 }
 
@@ -89,12 +85,13 @@ nav.scroll {
   opacity: 0.9;
 }
 
-.scroll .logo, ul li{
-  color: #FFF;
+.scroll .logo,
+ul li {
+  color: #fff;
 }
 
 .scroll .mobile-menu {
-  color: #FFF;
+  color: #fff;
 }
 
 /*MENU MOBILE*/
@@ -103,11 +100,11 @@ nav.scroll {
   cursor: pointer;
 }
 
-.mobile-menu div{
+.mobile-menu div {
   width: 32px;
   height: 2px;
   margin: 8px;
-  background-color: #7D82B8;
+  background-color: #7d82b8;
 }
 
 @media (max-width: 999px) {
@@ -115,14 +112,13 @@ nav.scroll {
     overflow-x: hidden;
   }
 
-  
   .nav-menu {
     position: absolute;
     top: 8vh;
     right: 0;
     width: 100vw;
     height: 92vh;
-    background-color: #7D82B8;
+    background-color: #7d82b8;
     opacity: 0.9;
     flex-direction: column;
     align-items: center;
@@ -130,9 +126,7 @@ nav.scroll {
     gap: 48px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
-    
   }
-
 
   .nav-menu li {
     margin-left: 0;
@@ -157,7 +151,6 @@ nav.scroll {
       transform: translateX(0);
     }
   }
-
 }
 
 .mobile-menu.active .line1 {
@@ -172,62 +165,58 @@ nav.scroll {
   transform: rotate(45deg) translate(-5px, -7px);
 }
 /*===============================INÍCIO=======================================*/
-#inicio{
+#inicio {
   width: 100%;
   max-width: 100vw;
   height: 80vh;
   padding-top: 10vh;
   background-color: var(--cor2);
-  margin:0;
+  margin: 0;
 
   /*flex*/
   display: flex;
   justify-content: space-between;
-  
- 
 }
-.slogan{
+.slogan {
   font-weight: 700;
   font-size: 2rem;
   line-height: 3rem;
   margin-top: 1.5rem;
 }
-.textinicio{
+.textinicio {
   width: 50%;
   padding-left: 3rem;
 }
-.textinicio p{
+.textinicio p {
   color: var(--cor1);
-  font-size: .75rem;
-  
+  font-size: 0.75rem;
 }
-.textinicio p:nth-child(3){
+.textinicio p:nth-child(3) {
   color: black;
   font-size: 1rem;
   margin-top: 1.5rem;
-  
 }
-.agendar{
-  color: #FFF;
-  background-color:#4c26d4 ;
+.agendar {
+  color: #fff;
+  background-color: #4c26d4;
   border-radius: 40px;
 }
-.wagende{
+.wagende {
   border-radius: 40px;
-  background-color:#4c26d4 ;
+  background-color: #4c26d4;
   cursor: pointer;
   text-decoration: none;
 }
-.wagende p{
+.wagende p {
   margin-top: 40px;
   max-width: 291px;
   width: 30%;
-  color: #FFF;
-  background-color:#4c26d4 ;
+  color: #fff;
+  background-color: #4c26d4;
   border-radius: 40px;
   padding: 10px;
 }
-.wagende p:before{
+.wagende p:before {
   content: "";
   display: block;
   background: url("images/icons8-whatsapp-24.png") no-repeat;
@@ -238,53 +227,52 @@ nav.scroll {
   margin: -3px 6px 0px 4px;
 }
 
-.imginicio{
+.imginicio {
   width: auto;
   height: auto;
   max-width: 500px;
-  max-height: 600px;;
+  max-height: 600px;
   float: right;
   margin-right: 100px;
 }
 /*================================SERVIÇOS====================================*/
-#servicos{
+#servicos {
   width: 100%;
   max-width: 100vw;
   background-color: var(--cor3);
-  margin:0;
+  margin: 0;
   /*flex*/
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
 }
-#servicos h1{
+#servicos h1 {
   padding-top: 2rem;
   text-transform: uppercase;
 }
-#servicos h1, h3{
+#servicos h1,
+h3 {
   font-weight: bold;
 }
-.parte1{
+.parte1 {
   display: flex;
   flex-direction: row;
   padding: 1.5rem;
-  
 }
-.parte1 div{
+.parte1 div {
   padding: 2rem;
 }
-.parte2{
+.parte2 {
   display: flex;
   flex-direction: row;
   padding: 1.5rem;
-  
 }
-.parte2 div{
+.parte2 div {
   padding: 2rem;
 }
 /*==============================ESP FÍSICO====================================*/
-#estrutura{
+#estrutura {
   height: 700px;
   width: 100vw;
   background-color: var(--cor2);
@@ -294,20 +282,19 @@ nav.scroll {
   justify-content: space-around;
   align-items: center;
 }
-#espaco h1{
+#espaco h1 {
   text-align: center;
   padding: 1rem;
 }
-#fisico{
+#fisico {
   width: 80%;
   height: 60%;
   background-position: center;
   background-image: url(assets/estrutura/est1.jpg);
   background-size: cover;
-
 }
 /*==============================DEPOIMENTOS===================================*/
-#depoimentos{
+#depoimentos {
   height: 300px;
   /*height: 80vh;*/
   width: 100vw;
@@ -318,7 +305,7 @@ nav.scroll {
   overflow-y: auto;
 }
 
-#depoimentos h1{
+#depoimentos h1 {
   text-transform: uppercase;
   font-weight: bold;
   color: #000;
@@ -327,19 +314,19 @@ nav.scroll {
   padding: 1rem;
 }
 
-#externa{
+#externa {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
-#primeiro, #segundo{
+#primeiro,
+#segundo {
   width: 40%;
   padding: 2rem;
 }
 
-#externa h3::before{
+#externa h3::before {
   content: "";
   display: block;
   background: url("images/icons8-male-user-48.png") no-repeat;
@@ -350,28 +337,102 @@ nav.scroll {
 }
 /*==============================SOBRE=========================================*/
 
-
-
-
-
-
-
 /*==============================CONTATO=======================================*/
+#contato {
+  display: flex;
+  flex-direction: column;
+}
 
+#contato a {
+  text-align: center;
+  margin-top: 2%;
+  text-transform: uppercase;
+  color: #7d82b8;
+}
+.contato-container {
+  display: flex;
+  font-style: normal;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  font-size: 20px;
+}
 
+.btn-ctt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 16px;
+  border: 0.65px solid rgba(73, 80, 87, 0.3);
+  box-sizing: border-box;
+  text-transform: uppercase;
+  background-color: #7d82b8;
+  border-radius: 40px;
+  color: #ffffff;
+}
 
+.btn-ctt p1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+.ctt-form {
+  display: flex;
+  align-items: center;
+  background-color: rgba(254, 249, 255, 1);
+  padding: 10px;
+}
+.ctt2 label {
+  color: #7d82b8;
+}
+.justfi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+.sub {
+  font-size: 10px;
+  color: #7d82b8;
+}
+#primeiro-nome {
+  box-sizing: border-box;
+  background: #d8e4ff;
+  border: 0.65px solid rgba(73, 80, 87, 0.3);
+  border-radius: 2.5px;
+}
+#sobrenome {
+  box-sizing: border-box;
+  background: #d8e4ff;
+  border: 0.65px solid rgba(73, 80, 87, 0.3);
+  border-radius: 2.5px;
+}
+#email {
+  box-sizing: border-box;
+  background: #d8e4ff;
+  border: 0.65px solid rgba(73, 80, 87, 0.3);
+  border-radius: 2.5px;
+}
+#botao {
+  padding: 10px 14px;
+  color: #ffffff;
+  background-color: #7d82b8;
+  border: 0.65px solid rgba(73, 80, 87, 0.3);
+  box-sizing: border-box;
+}
 
-
-
+#footer {
+  align-items: center;
+  display: flex;
+  font-style: normal;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  font-size: 20px;
+  background-color: #7d82b8;
+  color: #f5f5f5;
+}
 
 /*==============================FOOTER========================================*/
-
-
-
-
-
-
-
-
 
 /*==============================RESPONSIVIDADE====================================*/
