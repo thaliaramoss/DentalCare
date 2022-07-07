@@ -24,6 +24,12 @@ document.getElementById("direita").addEventListener("click",desliza)
 document.getElementById("esquerda").addEventListener("click",
 function teste(){
     contador = contador-2;
-    desliza()
+    if(contador >= 1){
+        desliza()
+    }else{
+        contador = 2;
+        desliza()
+    }
+
 }
 )
