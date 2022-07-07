@@ -1,12 +1,14 @@
 /*==============================GERAL====================================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
+/* dividir tamanho em px por 16 para obter rem */
 :root {
   /*Cores*/
   --cor1: #7d82b8;
   --cor2: #d8e4ff;
   --cor3: #fef9ff;
   --fonte: "Poppins";
+  font-size: 16px;
 }
 
 * {
@@ -26,68 +28,82 @@ body {
   min-height: 100vh;
   min-width: 100vw;
 }
-/*==============================NAVEGAÇÃO=====================================*/
+
 a {
   color: black;
   text-decoration: none;
 }
-
+/*==============================NAVEGAÇÃO=====================================*/
 nav {
   position: fixed;
   top: 0;
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #d8e4ff;
-  height: 8vh;
-}
-
-ul:last-child {
-  gap: 48px;
+  background-color: var(--cor2);
+  height: 4rem; 
+  padding: 1.2rem;
 }
 
 .logo {
-  width: 4px;
-  height: 4px;
-  display: flex;
-  justify-content: right;
+font-size: 1.5rem;
+font-weight: bold;
+color: var(--cor1);
 }
 
-.nav-menu {
+.menu {
   list-style: none;
   display: flex;
+  gap: 0.5rem;
+
 }
 
-.nav-menu li {
-  margin-left: auto;
-  font-weight: 400;
-  transition: 0.3s;
-  font-size: 16px;
+.menu a {
+  display: block;
+  padding: 1rem;
+  color: var(--cor1);
+
 }
 
-.nav-menu li:hover {
+.menu a:hover {
   font-weight: bold;
 }
 
 .button {
-  border: 1px solid black;
-  border-radius: 24px;
+  background: none;
+  color: var(--cor1);
+  border: 1px solid var(--cor1);
+  font-size: 1rem;
+  border-radius: 4rem;
+  padding: 0.6rem;
+  text-transform: uppercase;
   width: fit-content;
   height: min-content;
-  padding: 9px;
-  margin-left: 60px;
-  text-transform: uppercase;
 }
 
+.button:hover{
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* NAV SCROLL */
 nav.scroll {
   background-color: var(--cor1);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-.scroll .logo,
-ul li {
+.scroll .logo{
   color: #fff;
+}
+
+.scroll a{
+  color: #fff;
+}
+
+.scroll .button {
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .scroll .mobile-menu {
@@ -95,7 +111,7 @@ ul li {
 }
 
 /*MENU MOBILE*/
-.mobile-menu {
+.mobile-menu{
   display: none;
   cursor: pointer;
 }
@@ -112,33 +128,43 @@ ul li {
     overflow-x: hidden;
   }
 
-  .nav-menu {
+  .button {
+    display: none;
+  }
+
+  .menu {
     position: absolute;
-    top: 8vh;
+    top: 4rem;
     right: 0;
     width: 100vw;
-    height: 92vh;
+    height: calc(100vh - 4rem);
     background-color: #7d82b8;
-    opacity: 0.9;
+    opacity: 0.95;
     flex-direction: column;
     align-items: center;
     padding: 32px;
     gap: 48px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
-  }
 
-  .nav-menu li {
+  }
+  
+  .menu li {
     margin-left: 0;
     opacity: 0;
   }
 
   .mobile-menu {
     display: block;
+    
+  }
+  
+  .menu.active {
+    transform: translateX(0);
   }
 
-  .nav-menu.active {
-    transform: translateX(0);
+  .menu .logo.active{
+    color: #fff;
   }
 
   @keyframes navLinkFade {
@@ -169,7 +195,7 @@ ul li {
   width: 100%;
   max-width: 100vw;
   height: 80vh;
-  padding-top: 10vh;
+  padding-top: 12vh;
   background-color: var(--cor2);
   margin: 0;
 
@@ -181,7 +207,7 @@ ul li {
   font-weight: 700;
   font-size: 2rem;
   line-height: 3rem;
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
 }
 .textinicio {
   width: 50%;
@@ -369,6 +395,7 @@ h3 {
   background-color: #7d82b8;
   border-radius: 40px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .btn-ctt p1 {
@@ -422,6 +449,8 @@ h3 {
   box-sizing: border-box;
 }
 
+
+/*==============================FOOTER========================================*/
 #footer {
   align-items: center;
   display: flex;
@@ -432,7 +461,4 @@ h3 {
   background-color: #7d82b8;
   color: #f5f5f5;
 }
-
-/*==============================FOOTER========================================*/
-
 /*==============================RESPONSIVIDADE====================================*/
