@@ -262,62 +262,168 @@ nav.scroll {
   margin-right: 100px;
 }
 /*================================SERVIÇOS====================================*/
-#servicos {
+/*SERVIÇOS*/
+#servicos{
   width: 100%;
   max-width: 100vw;
   background-color: var(--cor3);
-  margin: 0;
+  margin:0;
   /*flex*/
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+
+
 }
-#servicos h1 {
+#servicos h1{
   padding-top: 2rem;
   text-transform: uppercase;
 }
-#servicos h1,
-h3 {
+#servicos h1, h3{
   font-weight: bold;
+  justify-items: center;
+  text-align: center;
 }
-.parte1 {
-  display: flex;
-  flex-direction: row;
+.parte1{
   padding: 1.5rem;
+  width: 100%;
+  /*Grid*/
+  display: grid;
+  grid-template-areas: 
+  "a1 a2 a3"
+  "a4 a5 a6";
+  grid-gap: 10px;
+
+  justify-content: center;
+  align-content: center;
+  
 }
-.parte1 div {
+.parte1 div{
   padding: 2rem;
+    
+  border: 2px solid #333;
+  border-radius: 5%;
+  background-color: var(--cor2);
+  
+  transition: all 0.5s ease-in-out;
 }
-.parte2 {
-  display: flex;
-  flex-direction: row;
-  padding: 1.5rem;
+
+.parte1 div:hover{
+  background-color: #4c26d4c9;
 }
-.parte2 div {
-  padding: 2rem;
+.parte1 div:nth-child(1){
+  grid-area: "a1";
+}
+.parte1 div:nth-child(2){
+  grid-area: "a2";
+}.parte1 div:nth-child(3){
+  grid-area: "a3";
+}.parte1 div:nth-child(4){
+  grid-area: "a4";
+}.parte1 div:nth-child(5){
+  grid-area: "a5";
+}.parte1 div:nth-child(6){
+  grid-area: "a6";
+}
+
+@media (max-width:900px) {
+  .parte1{
+    grid-template-areas: 
+    "a1 a2"
+    "a3 a4"
+    "a5 a6";
+  }  
+}
+
+@media (max-width:600px) {
+  .parte1{
+    grid-template-areas: 
+      "a1"
+      "a2"
+      "a3"
+      "a4"
+      "a5"
+      "a6";
+  }  
 }
 /*==============================ESP FÍSICO====================================*/
-#estrutura {
+#espaco{
   height: 700px;
   width: 100vw;
-  background-color: var(--cor2);
+  background-color: var(--cor1);
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
-#espaco h1 {
+#espaco h1{
   text-align: center;
   padding: 1rem;
 }
-#fisico {
+#fisico{
   width: 80%;
   height: 60%;
   background-position: center;
-  background-image: url(assets/estrutura/est1.jpg);
+  background-image: url(images/fisico1.jpg);
   background-size: cover;
+
+}
+.externa{
+  width: 100vw;
+  background-color: var(--cor1);
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+.interna{
+  width: 400%;
+  height: 100%;
+  overflow: hidden;
+
+  transform: translateX(0);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.img{
+  width: 25%;
+  position: relative;
+
+  transition: all 1s ease;
+}
+
+.img img{
+  width: 100%;
+  height: 100%;
+
+}
+
+.butao{
+
+  background-color: rgba(243, 239, 239, 0);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.butao button{
+  background-color: #d6d3d6c7;
+  border: none;
+  text-align: center;
+  padding: 1px;
+  border-radius: 3px;
 }
 /*==============================DEPOIMENTOS===================================*/
 #depoimentos {
