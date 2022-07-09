@@ -2,56 +2,29 @@
 window.addEventListener('scroll', NavOnScroll)
 function NavOnScroll() {
   if (scrollY > 0) {
-    navbar.classList.add('scroll')
+    nav.classList.add('scroll')
   } else {
-    navbar.classList.remove('scroll')
+    nav.classList.remove('scroll')
   }
 }
 // ========================MENU MOBILE=========================================================
-class MobileNavbar {
-  constructor(mobileMenu, navMenu, navLinks) {
-    this.mobileMenu = document.querySelector(mobileMenu);
-    this.navList = document.querySelector(navMenu);
-    this.navLinks = document.querySelectorAll(navLinks);
-    this.activeClass = "active";
+const btnMobile = document.getElementById('btn-mobile');
 
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  animateLinks() {
-    this.navLinks.forEach((link, index) => {
-      link.style.animation
-        ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`);
-    });
-  }
-
-  handleClick() {
-    this.navList.classList.toggle(this.activeClass);
-    this.mobileMenu.classList.toggle(this.activeClass);
-    this.animateLinks();
-  }
-
-  addClickEvent() {
-    this.mobileMenu.addEventListener("click", this.handleClick);
-  }
-
-  init() {
-    if (this.mobileMenu) {
-      this.addClickEvent();
-    }
-    return this;
+function toggleMenu(event) {
+  if (event.type === 'touchstart') event.preventDefault();
+  const nav = document.getElementById('nav');
+  nav.classList.toggle('active');
+  const active = nav.classList.contains('active');
+  event.currentTarget.setAttribute('aria-expanded', active);
+  if (active) {
+    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+  } else {
+    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
   }
 }
 
-const mobileNavbar = new MobileNavbar(
-  ".mobile-menu",
-  ".menu",
-  ".menu li",
-);
-mobileNavbar.init();
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
 
 
 //=================CAROUSEL DEP================================================================
@@ -95,25 +68,53 @@ function teste(){
 
 
 // ====================SCROLL SUAVE=============================================================
+const menuLinks = document.querySelectorAll('.menu a');
 
-/*======alteração nav========*/
-var menucounter = 0;
-
-function funcao1(){
- 
-  console.log(menucounter)
-  if (menucounter == 0){
-    menucounter=1;
-    console.log(menucounter)
-    document.getElementById('navbar').style="background-color:#7D82B8; color: #fff;"
-    document.getElementById('line1').style="background-color: #fff;"
-    document.getElementById('line3').style="background-color: #fff;"
-  } else {
-    menucounter=0;
-    console.log(menucounter)
-    document.getElementById('navbar').style="background-color:#D8E4FF; color: #fff;"
-    document.getElementById('line1').style="background-color: #7D82B8;"
-    document.getElementById('line3').style="background-color: #7D82B8;"
-  }
+function getDistanceFromTheTop(element) {
+  const id = element.getAttribute("href");
+  return document.querySelector(id).offsetTop;
 }
-document.getElementById('mobmenu').addEventListener('click', funcao1)
+
+// function nativeScroll(distanceFromTheTop) {
+//   window.scroll({
+//     top: distanceFromTheTop,
+//     behavior: "smooth",
+//   });
+// }
+
+function scrollToSection(event) {
+  event.preventDefault();
+  const distanceFromTheTop = getDistanceFromTheTop(event.target) - 63;
+  smoothScrollTo(0, distanceFromTheTop, 800);
+}
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", scrollToSection);
+});
+
+function smoothScrollTo(endX, endY, duration) {
+  const startX = window.scrollX || window.pageXOffset;
+  const startY = window.scrollY || window.pageYOffset;
+  const distanceX = endX - startX;
+  const distanceY = endY - startY;
+  const startTime = new Date().getTime();
+
+  duration = typeof duration !== "undefined" ? duration : 400;
+
+  const easeInOutQuart = (time, from, distance, duration) => {
+    if ((time /= duration / 2) < 1)
+      return (distance / 2) * time * time * time * time + from;
+    return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;
+  };
+
+  const timer = setInterval(() => {
+    const time = new Date().getTime() - startTime;
+    const newX = easeInOutQuart(time, startX, distanceX, duration);
+    const newY = easeInOutQuart(time, startY, distanceY, duration);
+    if (time >= duration) {
+      clearInterval(timer);
+    }
+    window.scroll(newX, newY);
+  }, 1000 / 60);
+}
+

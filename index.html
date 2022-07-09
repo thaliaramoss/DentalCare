@@ -10,25 +10,23 @@
 <body>
 
   <!--==============================NAVEGAÇÃO=====================================-->
-  <header>
-    <nav class="nav" id="navbar">
-        <a class="logo" href="/">DentalCare &#x1F9B7</a>
-        <div class="mobile-menu" id="mobmenu">
-          <div class="line1" id="line1"></div>
-          <div class="line2"></div>
-          <div class="line3" id="line3"></div>
-        </div>
-        <ul class="menu" id="menu"> 
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#estrutura">Estrutura</a></li>
-        </ul>
-        <a class="button" href="#contato">agendar consulta</a>
-      </nav>
-    </header>
-</header>
+  <header id="header">
+    <nav id="nav">
+      <a id="logo" href="">DentalCare &#x1F9B7</a>
+      <button  id="btn-mobile">
+        <span id="hamburger"></span>
+      </button>
+      <ul id="menu" role="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#espaco">Estrutura</a></li>
+        <li><a href="#contato"><button id="nav-button">agendar consulta</button></a></li>
+      </ul>
+    </nav>
+  </header>
+
 <main>
   <!--==============================INÍCIO=====================================-->
   <section id="inicio">
@@ -235,8 +233,8 @@
 
 </body>
 
-<!-- ScrollReaveal Lib -->
-<script src="https://unpkg.com/scrollreveal"></script>
+<!-- menu hamburger icon -->
+<script src="https://kit.fontawesome.com/6d48aa3c33.js" crossorigin="anonymous"></script>
 <script src="/main.js"></script>
 
 </html>
