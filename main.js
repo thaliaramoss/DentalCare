@@ -68,7 +68,7 @@ function teste(){
 
 
 // ====================SCROLL SUAVE=============================================================
-const menuLinks = document.querySelectorAll('.menu a');
+const menuLinks = document.querySelectorAll('#menu a');
 
 function getDistanceFromTheTop(element) {
   const id = element.getAttribute("href");

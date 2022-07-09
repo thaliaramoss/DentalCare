@@ -68,17 +68,19 @@ font-weight: bold;
   background: none;
   color: var(--cor1);
   border: 1px solid var(--cor1);
-  font-size: 1rem;
+  font-size: 0.9rem;
   border-radius: 4rem;
-  padding: 0.4rem;
+  padding: 0.2rem;
   text-transform: uppercase;
   width: fit-content;
   height: min-content;
   display: flex;
 }
 
+
 #nav-button:hover {
   font-weight: bold;
+  border: 2px solid var(--cor1);
 }
 
 #btn-mobile {
@@ -162,7 +164,7 @@ font-weight: bold;
   
   #nav.active #nav-button{
     color: #fff;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     padding: 1.5rem;
   }
 
