@@ -5,31 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <title>DentalCare</title>
 </head>
 <body>
 
   <!--==============================NAVEGAÇÃO=====================================-->
-  <header id="menu">
-    <nav class="menunav">
-        <a href="/" class="logo">Care</a>
-        <a href="#">Inicio</a>
-        <a href="#">Sobre</a>
-        <a href="#">Serviços</a>
-        <a href="#">Depoimentos</a>
-        <a href="#">Estrutura</a>
-        <a href="#">Contato</a>
-        <a href="#" class="agendar">Agendar</a>
+  <header id="header">
+    <nav id="nav">
+      <a id="logo" href="">DentalCare &#x1F9B7</a>
+      <button  id="btn-mobile">
+        <span id="hamburger"></span>
+      </button>
+      <ul id="menu" role="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#espaco">Estrutura</a></li>
+        <li><a id="nav-button" href="#contato">agendar consulta</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
+
 <main>
   <!--==============================INÍCIO=====================================-->
   <section id="inicio">
@@ -38,19 +35,16 @@
             SEJA BEM-VINDO(A) A DENTALCARE.
         </p>
         <h1 class="slogan">
-            Aqui o seu sorriso é a nossa prioridade!
+            O seu sorriso é a nossa prioridade!
         </h1>
         <p>
             Os profissionais da DentalCare se preocupam, devidamente, com seu bem-estar, proporcionando atendimentos com qualidade.
         </p>
-        <a class="wagende" href="#">
-            <p> Agende sua consulta</p>
+        <a class="wagende" href="https://web.whatsapp.com/" target="_blank">
+            <p>Agende sua consulta</p>
         </a>
     </div>
-
-    <aside class="imginicio">
-        
-    </aside>
+        <img class="imginicio" src="/assets/inicio/inicio.png" alt="imagem de uma mulher sorrindo">
 </section>
 
     <!--==============================SERVIÇOS=====================================-->
@@ -77,9 +71,6 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat laboriosam error maiores reiciendis incidunt perspiciatis rem, necessitatibus qui alias exercitationem itaque sequi? Dolorem facere odit amet expedita neque saepe possimus.
                     </p>
                 </div>
-
-            </div>
-            <div class="parte2">
                 <div>
                     <h3>Cuidados Pediátricos</h3>
                     <p>
@@ -103,7 +94,7 @@
         </section>
 
     <!--==============================ESPAÇO FÍSICO=====================================-->
-  <section id="espaco">
+    <section id="espaco">
       <h1>
           Conheça nosso espaço físico:
       </h1>
@@ -131,7 +122,8 @@
             </button>
         </div>   
       </div>
-  </section>    <!--==============================DEPOIMENTOS=====================================-->
+  </section>    
+   <!--==============================DEPOIMENTOS=====================================-->
   <section id="depoimentos">
     <h1>
         Conheça pessoas que tiveram seu sorriso renovado pela Dentalcare
@@ -158,28 +150,106 @@
 
     <!--==============================SOBRE=====================================-->
     <section  id="sobre" >
-      <p>Sobre</p>
-      <h2>Saiba mais sobre nós!</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellat temporibus id fuga, numquam ea, eaque a autem in rerum doloremque natus quo ipsum voluptas officiis quidem esse et cupiditate?</p>
+      <div class="sobre-container">
+ <h2>Quem somos?</h2>
+        <p2>A DentalCare é sinônimo de modernidade quando nos referimos à clínica odontológica em todo o Brasil. Voltada para a arte de fazer você sorrir, fundada em 2007, foi instalada em Belém do Pará, incialmente, e expandida por todo o territótio nacional, com objetivo de ser uma clínica voltada para a satisfação de seu usuário, tendo como foco principal você, paciente. Faça um agendamento de consulta conosco e tenha um atendimento diferenciado, com profissionais que se preocupam com seu bem estar!</p2>
+      </div>
     </section>
     <!--==============================CONTATO=====================================-->
-    <section id="contato" >
-      <h2>Entre em contato para ter um sorriso radiante! </h2>
-      <p>Av. Marquês de Herval, 640. </p>
-      <p>contato@dentalcare.com</p>
-    </section>
-</main>
-<!--==============================FOOTER=====================================-->
-<footer class="footer">
-  <div class="text-area">
-    <p>©2022 - DoctorCare</p>
-    <p>Todos os direitos reservados</p>
-  </div>
-  <div class="social-media"></div>
-</footer>
+    <section id="contato">
+        <a href="">contato</a>
+        <div class="contato-container">
+          <div class="ctt1">
+            <h2>Entre em contato <br> com a gente!</h2>
+            <br>
+            <p class="justfi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#7D82B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#7D82B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Av. Nazaré, 346</p>
+            <br>
+            <p class="justfi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#7D82B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M22 6L12 13L2 6" stroke="#7D82B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              contato@dentalcare.com</p>
+            <br>
+            <a href="https://web.whatsapp.com/" target="_blank">
+              <button class="btn-ctt">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.6 13.9996C16.4 13.8996 15.1 13.2996 14.9 13.1996C14.7 13.0996 14.5 13.0996 14.3 13.2996C14.1 13.4996 13.7 14.0996 13.5 14.2996C13.4 14.4996 13.2 14.4996 13 14.3996C12.3 14.0996 11.6 13.6996 11 13.1996C10.5 12.6996 10 12.0996 9.6 11.4996C9.5 11.2996 9.6 11.0996 9.7 10.9996C9.8 10.8996 9.9 10.6996 10.1 10.5996C10.2 10.4996 10.3 10.2996 10.3 10.1996C10.4 10.0996 10.4 9.89961 10.3 9.79961C10.2 9.69961 9.7 8.49961 9.5 7.99961C9.4 7.29961 9.2 7.29961 9 7.29961C8.9 7.29961 8.7 7.29961 8.5 7.29961C8.3 7.29961 8 7.49961 7.9 7.59961C7.3 8.19961 7 8.89961 7 9.69961C7.1 10.5996 7.4 11.4996 8 12.2996C9.1 13.8996 10.5 15.1996 12.2 15.9996C12.7 16.1996 13.1 16.3996 13.6 16.4996C14.1 16.6996 14.6 16.6996 15.2 16.5996C15.9 16.4996 16.5 15.9996 16.9 15.3996C17.1 14.9996 17.1 14.5996 17 14.1996C17 14.1996 16.8 14.0996 16.6 13.9996ZM19.1 4.89961C15.2 0.999609 8.9 0.999609 5 4.89961C1.8 8.09961 1.2 12.9996 3.4 16.8996L2 21.9996L7.3 20.5996C8.8 21.3996 10.4 21.7996 12 21.7996C17.5 21.7996 21.9 17.3996 21.9 11.8996C22 9.29961 20.9 6.79961 19.1 4.89961ZM16.4 18.8996C15.1 19.6996 13.6 20.1996 12 20.1996C10.5 20.1996 9.1 19.7996 7.8 19.0996L7.5 18.8996L4.4 19.6996L5.2 16.6996L5 16.3996C2.6 12.3996 3.8 7.39961 7.7 4.89961C11.6 2.39961 16.6 3.69961 19 7.49961C21.4 11.3996 20.3 16.4996 16.4 18.8996Z" fill="white" />
+                </svg>
+                <p1>agende sua consulta</p1>
+              </button>
+            </a> 
+          </div>
+          <form action="" class="ctt-form">
+            <div class="ctt2">
+              <h3 class="justfi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.94334 4.20996H19.3104C20.3669 4.20996 21.2313 5.06259 21.2313 6.1047V17.4731C21.2313 18.5152 20.3669 19.3679 19.3104 19.3679H3.94334C2.88686 19.3679 2.02246 18.5152 2.02246 17.4731V6.1047C2.02246 5.06259 2.88686 4.20996 3.94334 4.20996Z" stroke="#7D82B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M21.2313 6.10547L11.6269 12.737L2.02246 6.10547" stroke="#7D82B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>Cadastro newsletter</h3>
+              <div class="sub">
+                <p3> Saiba tudo sobre os melhores <br>tratamentos e promoções!</p3>
+              </div>
+              <br>
+              <div>
+                <label for="primeiro-nome">Primeiro Nome:</label>
+                <input type="text" id="primeiro-nome" placeholder="Ex: Lúcia" name="primeironome" required />
+              </div>
+              <div>
+                <label for="sobrenome" required>Sobrenome:</label>
+                <input type="text" id="sobrenome" placeholder="Ex: Moreira" name="fone" required />
+              </div>
+              <div>
+                <label for="numero">E-mail:</label>
+                <input type="email" id="email" placeholder="Ex: seunome@gmail.com" name="fone" required />
+              </div>
+              <div>
+                <button id="botao" type="submit">Enviar</button>
+              </div>
+          </form>
+        </div>
+        </div>
+      </section>
+      <br>
+      <br>
+
+      <!-- ===============FOOTER=================== -->
+      <footer id="footer">
+          <div class="footer-container">
+            <h1>dental<strong>Care</strong></h1>
+          <div>Av. Nazaré, 346</div>
+          <div>2022 - Todos os direitos reservados. &copy; </div>
+          <p>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15.9997 11.3703C16.1231 12.2025 15.981 13.0525 15.5935 13.7993C15.206 14.5461 14.5929 15.1517 13.8413 15.53C13.0898 15.9082 12.2382 16.0399 11.4075 15.9062C10.5768 15.7726 9.80947 15.3804 9.21455 14.7855C8.61962 14.1905 8.22744 13.4232 8.09377 12.5925C7.96011 11.7619 8.09177 10.9102 8.47003 10.1587C8.84829 9.40716 9.45389 8.79404 10.2007 8.40654C10.9475 8.01904 11.7975 7.87689 12.6297 8.0003C13.4786 8.12619 14.2646 8.52176 14.8714 9.12861C15.4782 9.73545 15.8738 10.5214 15.9997 11.3703Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17.5 6.5H17.51" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              
+          </p>
+          <p>
+            <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1H9C7.67392 1 6.40215 1.52678 5.46447 2.46447C4.52678 3.40215 4 4.67392 4 6V9H1V13H4V21H8V13H11L12 9H8V6C8 5.73478 8.10536 5.48043 8.29289 5.29289C8.48043 5.10536 8.73478 5 9 5H12V1Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </p>
+          <p>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.75 15.0205L15.5 11.7505L9.75 8.48047V15.0205Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+                         
+          </p>
+        </div>
+      </footer>
 
 </body>
 
+<!-- menu hamburger icon -->
+<script src="https://kit.fontawesome.com/6d48aa3c33.js" crossorigin="anonymous"></script>
 <script src="/main.js"></script>
 
 </html>
+
+        <p>Sobre a DentalCare</p>
