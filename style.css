@@ -163,7 +163,7 @@ font-weight: bold;
   }
   
   #nav.active #nav-button{
-    color: #fff;
+    color: var(--cor1);
     border: 2px solid #fff;
     padding: 1.5rem;
   }
@@ -187,7 +187,7 @@ font-weight: bold;
   opacity: 0.95;
 }
 
-.scroll .logo{
+.scroll #logo{
   color: #fff;
 }
 
@@ -200,7 +200,7 @@ font-weight: bold;
   border: 1px solid #fff;
 }
 
-.scroll .mobile-menu {
+.scroll #hamburger {
   color: #fff;
 }
 
