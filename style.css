@@ -244,8 +244,9 @@ font-weight: bold;
   grid-area: "areainicio2";
 }
 
-@media(max-width:500px){
+@media(max-width:768px){
   #inicio{
+    max-height: none;
     grid-template-areas:
     "areainicio1"
     "areainicio2";
@@ -254,6 +255,10 @@ font-weight: bold;
     width:100vw;
   }
 }
+@media(max-width:500px){
+  #inicio{
+    max-height: none; 
+  }}
 
 /*================================SERVIÇOS====================================*/
 /*SERVIÇOS*/
@@ -321,7 +326,7 @@ font-weight: bold;
   grid-area: "a6";
 }
 
-@media (max-width:900px) {
+@media (max-width:768px) {
   .parte1{
     grid-template-areas: 
     "a1 a2"
@@ -330,7 +335,7 @@ font-weight: bold;
   }  
 }
 
-@media (max-width:600px) {
+@media (max-width:500px) {
   .parte1{
     grid-template-areas: 
       "a1"
@@ -425,7 +430,6 @@ font-weight: bold;
 /*==============================DEPOIMENTOS===================================*/
 #depoimentos {
   max-height: 500px;
-  height: 40vh;
   width: 100vw;
   padding: 1rem;
   display: flex;
@@ -442,6 +446,10 @@ font-weight: bold;
   padding: 1rem;
 }
 @media (max-width:500px){
+  #depoimentos{
+
+    max-height: 450px;
+  }
   #depoimentos h1{
     font-size: 1.5rem;
     padding: 1rem;
@@ -546,7 +554,7 @@ font-weight: bold;
   margin-top: 3%;
   font-size: 1rem;
 }
-@media (max-width:500px){
+@media (max-width:768px){
   .contato-container{
     flex-direction: column;
   }
