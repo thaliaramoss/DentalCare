@@ -61,7 +61,7 @@ a {
 }
 
 #menu a:hover {
-font-weight: bold;
+  font-weight: bold;
 }
 
 #nav-button {
@@ -76,7 +76,6 @@ font-weight: bold;
   height: min-content;
   display: flex;
 }
-
 
 #nav-button:hover {
   font-weight: bold;
@@ -107,13 +106,12 @@ font-weight: bold;
     visibility: hidden;
     overflow-y: hidden;
   }
-  
-  
+
   #menu a {
     padding: 1rem 0;
     margin: 0 1rem;
   }
-  
+
   #btn-mobile {
     display: flex;
     padding: 0.5rem 1rem;
@@ -124,13 +122,12 @@ font-weight: bold;
     gap: 0.5rem;
   }
 
-#social-media {
-  display: flex;
-  align-items: center;
-  margin-top: 4rem; 
-  gap: 4rem;
-}
-
+  #social-media {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 4rem;
+  }
 
   #hamburger {
     border-top: 2px solid;
@@ -139,7 +136,7 @@ font-weight: bold;
   }
   #hamburger::after,
   #hamburger::before {
-    content: '';
+    content: "";
     display: block;
     width: 20px;
     height: 2px;
@@ -151,31 +148,31 @@ font-weight: bold;
 
   /* classe active */
   #nav.active {
-  background: var(--cor1);
+    background: var(--cor1);
   }
-  
-  #nav.active #logo{
+
+  #nav.active #logo {
     color: #fff;
   }
-  #nav.active #menu a{
+  #nav.active #menu a {
     color: #fff;
   }
-  
+
   #nav.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
     overflow-y: auto;
   }
-  
-  #nav.active #menu a{
+
+  #nav.active #menu a {
     color: #fff;
   }
-  
-  #nav.active #menu a{
+
+  #nav.active #menu a {
     color: #fff;
   }
-  
-  #nav.active #nav-button{
+
+  #nav.active #nav-button {
     color: var(--cor1);
     border: 2px solid #fff;
     padding: 1.5rem;
@@ -200,11 +197,11 @@ font-weight: bold;
   opacity: 0.95;
 }
 
-.scroll #logo{
+.scroll #logo {
   color: #fff;
 }
 
-.scroll a{
+.scroll a {
   color: #fff;
 }
 
@@ -290,167 +287,123 @@ font-weight: bold;
 }
 /*================================SERVIÇOS====================================*/
 /*SERVIÇOS*/
-#servicos{
+#servicos {
   width: 100%;
   max-width: 100vw;
   background-color: var(--cor3);
-  margin:0;
+  margin: 0;
   /*flex*/
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-
-
 }
-#servicos h1{
+#servicos h1 {
   padding-top: 2rem;
   text-transform: uppercase;
 }
-#servicos h1, h3{
+#servicos h1,
+h3 {
   font-weight: bold;
   justify-items: center;
   text-align: center;
 }
-.parte1{
+.parte1 {
   padding: 1.5rem;
   width: 100%;
   /*Grid*/
   display: grid;
-  grid-template-areas: 
-  "a1 a2 a3"
-  "a4 a5 a6";
+  grid-template-areas:
+    "a1 a2 a3"
+    "a4 a5 a6";
   grid-gap: 10px;
 
   justify-content: center;
   align-content: center;
-  
 }
-.parte1 div{
+.parte1 div {
   padding: 2rem;
-    
+
   border: 2px solid #333;
   border-radius: 5%;
   background-color: var(--cor2);
-  
+
   transition: all 0.5s ease-in-out;
 }
 
-.parte1 div:hover{
+.parte1 div:hover {
   background-color: #4c26d4c9;
 }
-.parte1 div:nth-child(1){
+.parte1 div:nth-child(1) {
   grid-area: "a1";
 }
-.parte1 div:nth-child(2){
+.parte1 div:nth-child(2) {
   grid-area: "a2";
-}.parte1 div:nth-child(3){
+}
+.parte1 div:nth-child(3) {
   grid-area: "a3";
-}.parte1 div:nth-child(4){
+}
+.parte1 div:nth-child(4) {
   grid-area: "a4";
-}.parte1 div:nth-child(5){
+}
+.parte1 div:nth-child(5) {
   grid-area: "a5";
-}.parte1 div:nth-child(6){
+}
+.parte1 div:nth-child(6) {
   grid-area: "a6";
 }
 
-@media (max-width:900px) {
-  .parte1{
-    grid-template-areas: 
-    "a1 a2"
-    "a3 a4"
-    "a5 a6";
-  }  
+@media (max-width: 900px) {
+  .parte1 {
+    grid-template-areas:
+      "a1 a2"
+      "a3 a4"
+      "a5 a6";
+  }
 }
 
-@media (max-width:600px) {
-  .parte1{
-    grid-template-areas: 
+@media (max-width: 600px) {
+  .parte1 {
+    grid-template-areas:
       "a1"
       "a2"
       "a3"
       "a4"
       "a5"
       "a6";
-  }  
+  }
 }
-/*==============================ESP FÍSICO====================================*/
-#espaco{
-  height: 700px;
-  width: 100vw;
-  background-color: #BBD0FF;
-
+/*==============================SOBRE=========================================*/
+#sobre {
+  margin-top: 10px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
+}
+#sobre a {
+  text-transform: uppercase;
+  color: #7d82b8;
+  font-weight: bold;
+  font-size: 14px;
+}
+.sobre-container {
+  font-style: normal;
+  display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
-#espaco h1{
-  text-align: center;
-  padding: 1rem;
+.h2-sobre {
+  font-size: 40px;
 }
-#fisico{
-  width: 80%;
-  height: 60%;
-  background-position: center;
-  background-image: url(images/fisico1.jpg);
-  background-size: cover;
-
+.ttsobre {
+  font-style: normal;
+  text-align: justify;
+  margin-left: 127px;
+  margin-right: 120px;
 }
-.externa{
-  width: 100vw;
-  background-color: var(--cor1);
-  position: relative;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-}
-.interna{
-  width: 400%;
-  height: 100%;
-  overflow: hidden;
-
-  transform: translateX(0);
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.img{
-  width: 25%;
-  position: relative;
-
-  transition: all 1s ease;
-}
-
-.img img{
-  width: 100%;
-  height: 100%;
-
-}
-
-.butao{
-
-  background-color: rgba(243, 239, 239, 0);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-.butao button{
-  background-color: #d6d3d6c7;
-  border: none;
-  text-align: center;
-  padding: 1px;
-  border-radius: 3px;
+.imgsobre img {
+  width: 430px;
+  height: 315px;
+  margin-left: 120px;
 }
 /*==============================DEPOIMENTOS===================================*/
 #depoimentos {
@@ -460,7 +413,6 @@ font-weight: bold;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-
   overflow-y: auto;
 }
 
@@ -479,7 +431,6 @@ font-weight: bold;
   flex-direction: row;
   justify-content: space-between;
 }
-#primeiro,
 #segundo {
   width: 40%;
   padding: 2rem;
@@ -495,35 +446,127 @@ font-weight: bold;
   margin: -3px 6px 0px 4px;
 }
 /*==============================SOBRE=========================================*/
-#sobre{
-  text-align: center;
-  margin-top: 2%;
-  text-transform: uppercase;
-  color: #7d82b8;
-}
-
-.sobre-container{
-  
-
-}
-
-/*==============================CONTATO=======================================*/
-#contato {
+#sobre {
+  margin-top: 10px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
 }
-
-#contato a {
-  text-align: center;
-  margin-top: 2%;
+#sobre a {
   text-transform: uppercase;
   color: #7d82b8;
+  font-weight: bold;
+  font-size: 14px;
+}
+.sobre-container {
+  font-style: normal;
+  display: flex;
+  justify-content: space-evenly;
+}
+.h2-sobre {
+  font-size: 40px;
+}
+.ttsobre {
+  font-style: normal;
+  text-align: justify;
+  margin-left: 127px;
+  margin-right: 120px;
+}
+.imgsobre img {
+  width: 430px;
+  height: 315px;
+  margin-left: 120px;
+}
+/*==============================ESP FÍSICO====================================*/
+#espaco {
+  margin-top: 10px;
+  padding: 50px;
+  height: 700px;
+  width: 100vw;
+  background-color: #bbd0ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#espaco h1 {
+  text-align: center;
+  padding: 1rem;
+}
+#fisico {
+  width: 80%;
+  height: 60%;
+  background-position: center;
+  background-image: url(images/fisico1.jpg);
+  background-size: cover;
+}
+.externa {
+  width: 100vw;
+  background-color: var(--cor1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.interna {
+  width: 400%;
+  height: 100%;
+  overflow: hidden;
+  transform: translateX(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.img {
+  width: 25%;
+  position: relative;
+  transition: all 1s ease;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+}
+
+.butao {
+  background-color: rgba(243, 239, 239, 0);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.butao button {
+  background-color: #d6d3d6c7;
+  border: none;
+  text-align: center;
+  padding: 1px;
+  border-radius: 3px;
+}
+/*==============================CONTATO=======================================*/
+#contato {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+#contato a {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7d82b8;
+  margin-block-end: 50px;
 }
 .contato-container {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 3%;
-  font-size: 20px;
 }
 
 .btn-ctt {
@@ -554,9 +597,8 @@ font-weight: bold;
 .ctt2 label {
   color: #7d82b8;
 }
-.justfi {
+.aling {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 7px;
 }
@@ -593,19 +635,44 @@ font-weight: bold;
   box-sizing: border-box;
 }
 
-
 /*==============================FOOTER========================================*/
 #footer {
-  align-items: center;
   display: flex;
-  justify-content: space-evenly;
-  margin-top:2%;
-  font-size: 20px;
+  margin-top: 10px;
   background-color: #7d82b8;
   color: #f5f5f5;
+  padding: 50px;
 }
-.footer-container{
+.footer-container {
+  justify-content: space-evenly;
+  margin: auto;
+}
+.ttfooter {
+  text-align: center;
+  list-style: none;
+}
+
+/*#footer svg {
+  margin: 10px;
+}*/
+#icons {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+  margin-right: 50px;
 }
+
+.sb {
+  font-size: 14px;
+}
+.tfooter {
+  font-size: 48px;
+}
+.bold {
+  font-weight: bolder;
+}
+
 /*==============================RESPONSIVIDADE====================================*/
+@media screen and (max-width: 768px) {
+}
