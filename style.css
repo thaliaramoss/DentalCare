@@ -86,10 +86,6 @@ a {
   display: none;
 }
 
-#social-media {
-  display: none;
-}
-
 @media (max-width: 964px) {
   #menu {
     flex-direction: column;
@@ -121,14 +117,6 @@ a {
     cursor: pointer;
     gap: 0.5rem;
   }
-
-  #social-media {
-    display: flex;
-    align-items: center;
-    margin-top: 4rem;
-    gap: 4rem;
-  }
-
   #hamburger {
     border-top: 2px solid;
     width: 20px;
@@ -173,7 +161,7 @@ a {
   }
 
   #nav.active #nav-button {
-    color: var(--cor1);
+    color: #fff;
     border: 2px solid #fff;
     padding: 1.5rem;
   }
@@ -197,7 +185,7 @@ a {
   opacity: 0.95;
 }
 
-.scroll #logo {
+.scroll .logo {
   color: #fff;
 }
 
@@ -210,7 +198,7 @@ a {
   border: 1px solid #fff;
 }
 
-.scroll #hamburger {
+.scroll .mobile-menu {
   color: #fff;
 }
 
@@ -373,38 +361,7 @@ h3 {
       "a6";
   }
 }
-/*==============================SOBRE=========================================*/
-#sobre {
-  margin-top: 10px;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-}
-#sobre a {
-  text-transform: uppercase;
-  color: #7d82b8;
-  font-weight: bold;
-  font-size: 14px;
-}
-.sobre-container {
-  font-style: normal;
-  display: flex;
-  justify-content: space-evenly;
-}
-.h2-sobre {
-  font-size: 40px;
-}
-.ttsobre {
-  font-style: normal;
-  text-align: justify;
-  margin-left: 127px;
-  margin-right: 120px;
-}
-.imgsobre img {
-  width: 430px;
-  height: 315px;
-  margin-left: 120px;
-}
+
 /*==============================DEPOIMENTOS===================================*/
 #depoimentos {
   height: 300px;
