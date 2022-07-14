@@ -87,6 +87,10 @@ font-weight: bold;
   display: none;
 }
 
+#social-media {
+  display: none;
+}
+
 @media (max-width: 964px) {
   #menu {
     flex-direction: column;
@@ -119,6 +123,15 @@ font-weight: bold;
     cursor: pointer;
     gap: 0.5rem;
   }
+
+#social-media {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem; 
+  gap: 4rem;
+}
+
+
   #hamburger {
     border-top: 2px solid;
     width: 20px;
