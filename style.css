@@ -7,6 +7,7 @@
   --cor1: #7d82b8;
   --cor2: #d8e4ff;
   --cor3: #fef9ff;
+  --cor4: #2A2E55;
   --fonte: "Poppins";
   font-size: 16px;
 }
@@ -407,6 +408,8 @@ h3 {
   width: 100vw;
   text-align: center;
   display: flex;
+  flex-direction: column;
+  background: var(--cor3);
   justify-items: center;
   align-items: center;
 }
@@ -597,6 +600,7 @@ h3 {
   padding: 1px;
   border-radius: 3px;
 }
+
 /*==============================CONTATO=======================================*/
 #contato {
   margin-top: 10px;
@@ -630,6 +634,10 @@ h3 {
   border-radius: 40px;
   color: #ffffff;
   cursor: pointer;
+}
+
+.btn-ctt:hover{
+  background-color: var(--cor4);
 }
 
 .btn-ctt p1 {
