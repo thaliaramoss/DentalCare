@@ -486,6 +486,7 @@ h3 {
   margin-right: auto;
   text-align: center;
   padding: 5em 0;
+  background-color:  rgba(254, 249, 255, 1);
 }
 .inf-allbox {
   display: inline-block;
