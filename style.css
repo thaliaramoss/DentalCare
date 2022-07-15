@@ -511,7 +511,7 @@ font-weight: bold;
   background-color: #EDF2FB;
 }
 /*==============================SOBRE=========================================*/
-#sobre{
+/*#sobre{
   text-align: center;
   margin-top: 2%;
   text-transform: uppercase;
@@ -531,6 +531,64 @@ font-weight: bold;
   text-align: justify;
   color: #000;
   margin: 0 auto;
+}*/
+#sobre {
+  padding: 1.5rem;
+  width: 100vw;
+  display: flex;
+  margin: 0 auto;
+}
+
+#sobre a {
+  text-transform: uppercase;
+  color: #7d82b8;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.sobre-container {
+  width: 100%;
+  font-style: normal;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.h2-sobre {
+  font-size: 40px;
+}
+.ttsobre {
+  width: 40%;
+  font-style: normal;
+  text-align: justify;
+}
+.ttsobre p2{
+  width: 90%;
+}
+.imgsobre{
+  width: 40vw;
+  max-width: 500px;
+}
+.imgsobre img {
+  width: 100%;
+}
+
+@media (max-width:1200px){
+  .sobre-container{
+    flex-direction: column;
+    margin-top: 2rem;
+    
+  }
+  .imgsobre{
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .ttsobre{
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .ttsobre a, .h2-sobre{
+    font-size: 1.5rem;
+  }
 }
 
 /*==============================CONTATO=======================================*/
