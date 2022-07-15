@@ -215,75 +215,60 @@ a {
 }
 
 /*===============================INÍCIO=======================================*/
-#inicio {
+#inicio{
   width: 100%;
   max-width: 100vw;
-  height: 80vh;
+  max-height: 80vh;
   padding-top: 12vh;
   background-color: var(--cor2);
-  margin: 0;
 
-  /*flex*/
+  display: grid;
+  grid-template-areas:
+  "areainicio1 areainicio2";
+  justify-items: center;
+}
+.textinicio{
+  width: 50vw;
+  padding: 1.5rem;
+  grid-area: "areainicio1";
   display: flex;
-  justify-content: space-between;
+  padding: 1.5rem;
+  flex-direction: column;
 }
-.slogan {
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 3rem;
-  margin-top: 1.2rem;
+.textinicio p{
+  padding-bottom: 1.5rem;
 }
-.textinicio {
-  width: 50%;
-  padding-left: 3rem;
+.wagende{
+  text-align: center;
 }
-.textinicio p {
-  color: var(--cor1);
-  font-size: 0.75rem;
+.wagende p{
+  background-color: var(--cor1);
+  color: var(--cor3);
+  border-radius: 5px;
+  max-width: 230px;
+  margin: 0 auto;
+
+  padding-bottom: 0px;
 }
-.textinicio p:nth-child(3) {
-  color: black;
-  font-size: 1rem;
-  margin-top: 1.5rem;
-}
-.agendar {
-  color: #fff;
-  background-color: #4c26d4;
-  border-radius: 40px;
-}
-.wagende {
-  border-radius: 40px;
-  background-color: #4c26d4;
-  cursor: pointer;
-  text-decoration: none;
-}
-.wagende p {
-  margin-top: 40px;
-  max-width: 291px;
-  width: 30%;
-  color: #fff;
-  background-color: #4c26d4;
-  border-radius: 40px;
-  padding: 10px;
-}
-.wagende p:before {
-  content: "";
-  display: block;
-  background: url("images/icons8-whatsapp-24.png") no-repeat;
-  width: 24px;
-  height: 24px;
-  float: left;
-  padding: 16px;
-  margin: -3px 6px 0px 4px;
+.imgcont{
+  grid-area: "areainicio2";
 }
 
-.imginicio {
-  width: auto;
-  height: auto;
-  max-width: 500px;
-  max-height: 600px;
-  float: right;
-  margin-right: 100px;
+@media(max-width:768px){
+  #inicio{
+    max-height: none;
+    grid-template-areas:
+    "areainicio1"
+    "areainicio2";
+  }
+  .textinicio{
+    width:100vw;
+  }
+}
+@media(max-width:500px){
+  #inicio{
+    max-height: none; 
+  }
 }
 /*================================SERVIÇOS====================================*/
 /*SERVIÇOS*/
@@ -376,13 +361,12 @@ h3 {
 
 /*==============================DEPOIMENTOS===================================*/
 #depoimentos {
-  height: 300px;
-  /*height: 80vh;*/
+  max-height: 500px;
   width: 100vw;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+
 }
 
 #depoimentos h1 {
@@ -393,58 +377,129 @@ h3 {
   text-align: center;
   padding: 1rem;
 }
+@media (max-width:500px){
+  #depoimentos{
 
+    max-height: 450px;
+  }
+  #depoimentos h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  #depoimentos .externa{
+    margin-top: 2.5rem;
+  }
+}
 #externa {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-#segundo {
-  width: 40%;
-  padding: 2rem;
 }
 
 #externa h3::before {
   content: "";
   display: block;
-  background: url("images/icons8-male-user-48.png") no-repeat;
+  background: url("assets/depoimentos/icons8-male-user-48.png") no-repeat;
   width: 48px;
   height: 48px;
   float: left;
   margin: -3px 6px 0px 4px;
 }
-/*==============================SOBRE=========================================*/
-#sobre {
-  margin-top: 10px;
-  padding: 50px;
+.comentario{
+  width: 100vw;
+  text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  
 }
+.comentText{
+  width: 80vw;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: justify;
+
+}
+.comentario:not(#comentario1){
+  display:none
+}
+#controle{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.undcontrole{
+  margin:0 8px;
+  cursor: pointer;
+  display: inline-block;
+  width:20px;
+  height:20px;
+  border-radius:10px;
+  background-color: #EDF2FB;
+}/*==============================SOBRE=========================================*/
+#sobre {
+  padding: 1.5rem;
+  width: 100vw;
+  display: flex;
+  margin: 0 auto;
+}
+
 #sobre a {
   text-transform: uppercase;
   color: #7d82b8;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 2rem;
 }
 .sobre-container {
+  width: 100%;
   font-style: normal;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex-direction: row;
 }
+
 .h2-sobre {
   font-size: 40px;
 }
 .ttsobre {
+  width: 40%;
   font-style: normal;
   text-align: justify;
-  margin-left: 127px;
-  margin-right: 120px;
+}
+.ttsobre p2{
+  width: 90%;
+}
+.imgsobre{
+  width: 40vw;
+  max-width: 500px;
 }
 .imgsobre img {
-  width: 430px;
-  height: 315px;
-  margin-left: 120px;
+  width: 100%;
+}
+
+@media (max-width:1200px){
+  .sobre-container{
+    flex-direction: column;
+    margin-top: 2rem;
+    
+  }
+  .imgsobre{
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .ttsobre{
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .ttsobre a, .h2-sobre{
+    font-size: 1.5rem;
+  }
 }
 /*==============================ESP FÍSICO====================================*/
 #espaco {
@@ -466,8 +521,7 @@ h3 {
   width: 80%;
   height: 60%;
   background-position: center;
-  background-image: url(images/fisico1.jpg);
-  background-size: cover;
+  
 }
 .externa {
   width: 100vw;
@@ -603,7 +657,14 @@ h3 {
   border: 0.65px solid rgba(73, 80, 87, 0.3);
   box-sizing: border-box;
 }
-
+@media (max-width:768px){
+  .contato-container{
+    flex-direction: column;
+  }
+  .ctt-form{
+    padding-top: 1.5rem;
+  }
+}
 /*==============================FOOTER========================================*/
 #footer {
   display: flex;
@@ -621,9 +682,6 @@ h3 {
   list-style: none;
 }
 
-/*#footer svg {
-  margin: 10px;
-}*/
 #icons {
   display: flex;
   align-items: center;
@@ -641,7 +699,15 @@ h3 {
 .bold {
   font-weight: bolder;
 }
-
+@media (max-width:768px){
+  #footer{
+    flex-direction: column;
+  }
+  #icons{
+    padding-top: 1rem;
+    margin: 0 auto;
+  }
+}
 /*==============================RESPONSIVIDADE====================================*/
 @media screen and (max-width: 768px) {
 }
