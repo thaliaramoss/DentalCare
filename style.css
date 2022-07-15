@@ -242,6 +242,7 @@ a {
 .wagende{
   text-align: center;
 }
+
 .wagende p{
   background-color: var(--cor1);
   color: var(--cor3);
@@ -251,6 +252,27 @@ a {
 
   padding-bottom: 0px;
 }
+
+
+.wagende {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 16px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  background-color: #7d82b8;
+  border-radius: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.wagende:hover{
+  background-color: var(--cor4);
+}
+
 .imgcont{
   grid-area: "areainicio2";
 }
@@ -284,9 +306,9 @@ a {
   flex-direction: column;
   align-items: center;
 }
-#servicos h1 {
+#servicos h2 {
   padding-top: 2rem;
-  text-transform: uppercase;
+  
 }
 #servicos h1,
 h3 {
@@ -370,8 +392,7 @@ h3 {
 
 }
 
-#depoimentos h1 {
-  text-transform: uppercase;
+#depoimentos h2 {
   font-weight: bold;
   color: #000;
   max-height: 130px;
@@ -453,12 +474,6 @@ h3 {
   margin: 0 auto;
 }
 
-#sobre a {
-  text-transform: uppercase;
-  color: #7d82b8;
-  font-weight: bold;
-  font-size: 2rem;
-}
 .sobre-container {
   width: 100%;
   font-style: normal;
@@ -468,7 +483,8 @@ h3 {
 }
 
 .h2-sobre {
-  font-size: 40px;
+  text-align: center;
+  padding: 1rem;
 }
 .ttsobre {
   width: 40%;
@@ -484,6 +500,7 @@ h3 {
 }
 .imgsobre img {
   width: 100%;
+  border-radius: 2rem;
 }
 
 @media (max-width:1200px){
@@ -516,7 +533,7 @@ h3 {
   justify-content: space-evenly;
   align-items: center;
 }
-#espaco h1 {
+#espaco h2 {
   text-align: center;
   padding: 1rem;
 }
@@ -528,7 +545,7 @@ h3 {
 }
 .externa {
   width: 100vw;
-  background-color: var(--cor1);
+  background-color: #bbd0ff;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -583,14 +600,6 @@ h3 {
   padding: 50px;
 }
 
-#contato a {
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #7d82b8;
-  margin-block-end: 50px;
-}
 .contato-container {
   display: flex;
   justify-content: space-evenly;
@@ -623,7 +632,8 @@ h3 {
   display: flex;
   align-items: center;
   background-color: rgba(254, 249, 255, 1);
-  padding: 10px;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 .ctt2 label {
   color: #7d82b8;
@@ -636,7 +646,9 @@ h3 {
 .sub {
   font-size: 10px;
   color: #7d82b8;
+  margin-top: 0.5rem;
 }
+
 #primeiro-nome {
   box-sizing: border-box;
   background: #d8e4ff;
@@ -673,7 +685,9 @@ h3 {
 @media (max-width:768px){
   .contato-container{
     flex-direction: column;
+    gap: 1rem;
   }
+
   .ctt-form{
     padding-top: 1.5rem;
   }
@@ -721,6 +735,4 @@ h3 {
     margin: 0 auto;
   }
 }
-/*==============================RESPONSIVIDADE====================================*/
-@media screen and (max-width: 768px) {
-}
+
