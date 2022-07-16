@@ -253,7 +253,7 @@ a {
   grid-area: "areainicio2";
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #inicio {
     max-height: none;
     grid-template-areas:
@@ -264,7 +264,7 @@ a {
     width: 100vw;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   #inicio {
     max-height: none;
   }
@@ -346,7 +346,7 @@ h3 {
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .parte1 {
     grid-template-areas:
       "a1"
@@ -375,7 +375,7 @@ h3 {
   text-align: center;
   padding: 1rem;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   #depoimentos {
     max-height: 450px;
   }
@@ -438,13 +438,13 @@ h3 {
   height: 20px;
   border-radius: 10px;
   background-color: #edf2fb;
-} /*==============================SOBRE=========================================*/
+} 
+/*==============================SOBRE=========================================*/
 #sobre {
   padding: 1.5rem;
   width: 100vw;
   display: flex;
   margin: 0 auto;
-  background-color: rgba(254, 249, 255, 1);
 }
 
 #sobre a {
@@ -480,13 +480,9 @@ h3 {
   width: 100%;
 }
 #wrapper-container {
-  max-width: 1200px;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   padding: 5em 0;
-  background-color:  rgba(254, 249, 255, 1);
 }
 .inf-allbox {
   display: inline-block;
@@ -495,15 +491,16 @@ h3 {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
 }
-
-.inf-allbox:nth-child(2) {
-  border: none;
+.inf-allbox:nth-child(1) {
+  border-left: none;
 }
-
-.inf-allbox:nth-child(3) {
+.inf-allbox:nth-child(2) {
+  border-left: none;
   border-right: none;
 }
-
+.inf-allbox:nth-child(3), .inf-allbox:nth-child(4) {
+  border-right: none;
+}
 .box-qtd {
   font-size: 36px;
   font-weight: bolder;
@@ -514,7 +511,7 @@ h3 {
   color: #7d82b8;
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .sobre-container {
     flex-direction: column;
     margin-top: 2rem;
@@ -527,14 +524,34 @@ h3 {
     width: 80vw;
     margin: 0 auto;
   }
-  .ttsobre a,
   .h2-sobre {
     font-size: 1.5rem;
+  }
+  .inf-allbox {
+    text-align: center;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    width: 50%;  
+    border-top: 1px solid #ddd;
+  }
+  .box-qtd {
+  text-align: center;
+  font-size: 30px;
+  }
+  
+  .box-text {
+    font-size: 12px
+  }
+  .inf-allbox:nth-child(1), .inf-allbox:nth-child(2), .inf-allbox:nth-child(3), .inf-allbox:nth-child(4) {
+    border-left: none;
+    border-right: none;
+  }
+  .inf-allbox:nth-child(1){
+    border-top: none;
   }
 }
 /*==============================ESP FÍSICO====================================*/
 #espaco {
-  margin-top: 10px;
   padding: 50px;
   height: 700px;
   width: 100vw;
@@ -602,6 +619,19 @@ h3 {
   border-radius: 3px;
 }
 
+@media screen and (max-width: 768px)  {
+  #fisico {
+    width: 80%;
+    height: 20%;
+    background-position: center;
+  } 
+  #espaco {
+    padding: 1px;
+
+  }
+    
+}
+
 /*==============================CONTATO=======================================*/
 #contato {
   margin-top: 10px;
@@ -637,8 +667,12 @@ h3 {
   cursor: pointer;
 }
 
-.btn-ctt:hover{
-  background-color: var(--cor4);
+.btn-ctt:hover {
+  background-color:var(--cor4);
+}
+
+#botao:hover{
+  background-color:var(--cor4);
 }
 
 .btn-ctt p1 {
@@ -651,6 +685,9 @@ h3 {
   align-items: center;
   background-color: rgba(254, 249, 255, 1);
   padding: 10px;
+}
+.ctt1 h2{
+  max-width: 300px;
 }
 .ctt2 label {
   color: #7d82b8;
@@ -692,13 +729,33 @@ h3 {
   border: 0.65px solid rgba(73, 80, 87, 0.3);
   box-sizing: border-box;
 }
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
   .contato-container {
     flex-direction: column;
   }
+.btn-ctt p1 {
+  line-height: 16px;
+}
+.btn-ctt {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 5px;
+  margin-block-end: 50px ;
+}
   .ctt-form {
-    padding-top: 1.5rem;
+    padding: 20px 6px;
+
   }
+  #primeiro-nome, #sobrenome, #email{
+    margin: 5px;
+  }
+.contato-container{
+margin: auto;
+padding: 3px;
+}
 }
 /*==============================FOOTER========================================*/
 #footer {
@@ -710,7 +767,7 @@ h3 {
 }
 .footer-container {
   justify-content: space-evenly;
-  margin: auto;
+  margin: 0 auto;
 }
 .ttfooter {
   text-align: center;
@@ -734,14 +791,25 @@ h3 {
 .bold {
   font-weight: bolder;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #footer {
     flex-direction: column;
+  }
+  .tfooter{
+    font-size: 40px;
+  }
+  .sb{
+    font-size: 14px;
+  }
+  #icons svg{
+    width: 15px;
+    height: 15px;
   }
   #icons {
     padding-top: 1rem;
     margin: 0 auto;
   }
+  
 }
 /*==============================RESPONSIVIDADE====================================*/
 @media screen and (max-width: 768px) {
