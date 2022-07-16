@@ -7,7 +7,7 @@
   --cor1: #7d82b8;
   --cor2: #d8e4ff;
   --cor3: #fef9ff;
-  --cor4: #2A2E55;
+  --cor4: #2a2e55;
   --fonte: "Poppins";
   font-size: 16px;
 }
@@ -438,7 +438,7 @@ h3 {
   height: 20px;
   border-radius: 10px;
   background-color: #edf2fb;
-} 
+}
 /*==============================SOBRE=========================================*/
 #sobre {
   padding: 1.5rem;
@@ -498,7 +498,8 @@ h3 {
   border-left: none;
   border-right: none;
 }
-.inf-allbox:nth-child(3), .inf-allbox:nth-child(4) {
+.inf-allbox:nth-child(3),
+.inf-allbox:nth-child(4) {
   border-right: none;
 }
 .box-qtd {
@@ -531,22 +532,25 @@ h3 {
     text-align: center;
     margin: 5px 5px;
     padding: 5px 5px;
-    width: 50%;  
+    width: 50%;
     border-top: 1px solid #ddd;
   }
   .box-qtd {
-  text-align: center;
-  font-size: 30px;
+    text-align: center;
+    font-size: 30px;
   }
-  
+
   .box-text {
-    font-size: 12px
+    font-size: 12px;
   }
-  .inf-allbox:nth-child(1), .inf-allbox:nth-child(2), .inf-allbox:nth-child(3), .inf-allbox:nth-child(4) {
+  .inf-allbox:nth-child(1),
+  .inf-allbox:nth-child(2),
+  .inf-allbox:nth-child(3),
+  .inf-allbox:nth-child(4) {
     border-left: none;
     border-right: none;
   }
-  .inf-allbox:nth-child(1){
+  .inf-allbox:nth-child(1) {
     border-top: none;
   }
 }
@@ -619,17 +623,15 @@ h3 {
   border-radius: 3px;
 }
 
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 768px) {
   #fisico {
     width: 80%;
     height: 20%;
     background-position: center;
-  } 
+  }
   #espaco {
     padding: 1px;
-
   }
-    
 }
 
 /*==============================CONTATO=======================================*/
@@ -668,11 +670,11 @@ h3 {
 }
 
 .btn-ctt:hover {
-  background-color:var(--cor4);
+  background-color: var(--cor4);
 }
 
-#botao:hover{
-  background-color:var(--cor4);
+#botao:hover {
+  background-color: var(--cor4);
 }
 
 .btn-ctt p1 {
@@ -686,7 +688,7 @@ h3 {
   background-color: rgba(254, 249, 255, 1);
   padding: 10px;
 }
-.ctt1 h2{
+.ctt1 h2 {
   max-width: 300px;
 }
 .ctt2 label {
@@ -734,28 +736,29 @@ h3 {
   .contato-container {
     flex-direction: column;
   }
-.btn-ctt p1 {
-  line-height: 16px;
-}
-.btn-ctt {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px 20px;
-  gap: 5px;
-  margin-block-end: 50px ;
-}
+  .btn-ctt p1 {
+    line-height: 16px;
+  }
+  .btn-ctt {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 5px;
+    margin-block-end: 50px;
+  }
   .ctt-form {
     padding: 20px 6px;
-
   }
-  #primeiro-nome, #sobrenome, #email{
+  #primeiro-nome,
+  #sobrenome,
+  #email {
     margin: 5px;
   }
-.contato-container{
-margin: auto;
-padding: 3px;
-}
+  .contato-container {
+    margin: auto;
+    padding: 3px;
+  }
 }
 /*==============================FOOTER========================================*/
 #footer {
@@ -795,13 +798,13 @@ padding: 3px;
   #footer {
     flex-direction: column;
   }
-  .tfooter{
+  .tfooter {
     font-size: 40px;
   }
-  .sb{
+  .sb {
     font-size: 14px;
   }
-  #icons svg{
+  #icons svg {
     width: 15px;
     height: 15px;
   }
@@ -809,7 +812,6 @@ padding: 3px;
     padding-top: 1rem;
     margin: 0 auto;
   }
-  
 }
 /*==============================RESPONSIVIDADE====================================*/
 @media screen and (max-width: 768px) {
